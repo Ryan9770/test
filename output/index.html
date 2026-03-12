@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그라이크 던전 탐험대</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="ui-overlay">
+            <div class="ui-section">
+                <span class="ui-label">LEVEL:</span>
+                <span id="player-level" class="ui-value">1</span>
+            </div>
+            <div class="ui-section hp-bar-container">
+                <span class="ui-label">HP:</span>
+                <div class="bar-background">
+                    <div id="hp-bar" class="bar-fill hp-fill"></div>
+                </div>
+                <span id="hp-text" class="ui-value">100/100</span>
+            </div>
+            <div class="ui-section exp-bar-container">
+                <span class="ui-label">EXP:</span>
+                <div class="bar-background">
+                    <div id="exp-bar" class="bar-fill exp-fill"></div>
+                </div>
+                <span id="exp-text" class="ui-value">0/100</span>
+            </div>
+        </div>
+        <canvas id="gameCanvas"></canvas>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

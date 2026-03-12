@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Press Start 2P', cursive, monospace; /* 픽셀 아트 폰트가 있다면 더 좋음 */
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    border: 2px solid #555;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+    background-color: #000;
+}
+
+#gameCanvas {
+    display: block;
+    background-color: #000; /* 맵이 로드되기 전 기본 배경 */
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px 10px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-bottom: 1px solid #444;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.ui-section {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.ui-label {
+    margin-right: 5px;
+    font-weight: bold;
+    color: #AAA;
+}
+
+.ui-value {
+    color: #FFF;
+}
+
+.bar-background {
+    width: 100px;
+    height: 10px;
+    background-color: #555;
+    border: 1px solid #333;
+    margin: 0 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 0%;
+    transition: width 0.2s ease-out;
+}
+
+.hp-fill {
+    background-color: #DC143C; /* Crimson */
+}
+
+.exp-fill {
+    background-color: #FFD700; /* Gold */
+}
